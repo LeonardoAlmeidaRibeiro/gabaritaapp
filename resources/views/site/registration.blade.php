@@ -8,7 +8,6 @@
     <meta NAME="robots" CONTENT="noarchive">
     <meta NAME="robots" CONTENT="index, nofollow, noarchive">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src fonts.googleapis.com; img-src 'self'; child-src 'none'; style-src 'self'; script-src 'self'">
     <!--begin::Fonts-->
     <link href="/fonts/poppins.css" rel="stylesheet">
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
@@ -29,7 +28,7 @@
 </style>
 
 <!--begin::Body-->
-<body id="kt_body" class="app-blank app-blank bgi-size-cover bgi-position-center bgi-no-repeat" border='1px'>
+<body id="kt_body" class="app-blank app-blank bgi-size-cover bgi-position-center bgi-no-repeat" style="background-color: #F5F8FA">
     <!--begin::Authentication - Sign-up -->
     <div class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-center p-20">
         <!--begin::Wrapper-->
@@ -37,7 +36,8 @@
             <!--begin::Content-->
             <div class="w-md-400px">
                 <!--begin::Form-->
-                <form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" data-kt-redirect-url="../../demo1/dist/authentication/layouts/overlay/sign-in.html" action="#">
+                <form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" data-kt-redirect-url="{{ route('testeCadastro') }}" action="{{ route('testeCadastro') }}" method="POST">
+                    @csrf
                     <!--begin::Heading-->
                     <div class="text-center mb-11">
                         <!--begin::Title-->
@@ -102,12 +102,12 @@
                     <!--end::Accept-->
                     <!--begin::Submit button-->
                     <div class="d-grid mb-10">
-                        <button type="button" id="kt_sign_up_submit" class="btn btn-primary" onclick="myFunction()">
+                        <button type="button" id="kt_sign_up_submit" class="btn btn-primary">
                             <!--begin::Indicator label-->
                             <span class="indicator-label">Inscrever-se</span>
                             <!--end::Indicator label-->
                             <!--begin::Indicator progress-->
-                            <span class="indicator-progress">Please wait...
+                            <span class="indicator-progress">Aguarde un momento...
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             <!--end::Indicator progress-->
                         </button>
@@ -127,12 +127,11 @@
     <!--end::Authentication - Sign-up-->
     <!--end::Root-->
     <!--begin::Javascript-->
-    <script>
-        function myFunction() {
-            alert("Eu sou um alert!");
-        }
-
-    </script>
+    <script src="{{ url ('assets/plugins/global/plugins.bundle.js')}}"></script>
+    <script src="{{ url ('assets/js/scripts.bundle.js')}}"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Custom Javascript(used by this page)-->
+    <script src="{{ url ('assets/js/custom/authentication/sign-up/general.js')}}"></script>
     <!--begin::Global Javascript Bundle(used by all pages)-->
     <!--end::Custom Javascript-->
     <!--end::Javascript-->

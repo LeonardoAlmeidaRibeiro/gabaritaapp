@@ -99,7 +99,7 @@ var KTSignupGeneral = function () {
                             t.removeAttribute("data-kt-indicator"),
                             t.disabled = !1,
                             Swal.fire({
-                                text: "Você redefiniu sua senha com sucesso!",
+                                text: "Você se cadastrou com sucesso!!",
                                 icon: "success",
                                 buttonsStyling: !1,
                                 confirmButtonText: "Ok, entendi!",
@@ -136,7 +136,7 @@ var KTSignupGeneral = function () {
     }
 }();
 
-// Executa quando o DOM estiver carregado
+// Executa quando o DOM estiver carregado esse é o do em breve
 KTUtil.onDOMContentLoaded(function () {
     KTSignupGeneral.init();
 });

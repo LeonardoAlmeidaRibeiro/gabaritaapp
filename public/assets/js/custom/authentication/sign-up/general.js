@@ -2,7 +2,6 @@
 var KTSignupGeneral = function () {
     var e, t, a, r;
 
-    // Verifica se a força da senha é 100%
     var s = function () {
         return 100 === r.getScore();
     };
@@ -99,7 +98,7 @@ var KTSignupGeneral = function () {
                             t.removeAttribute("data-kt-indicator"),
                             t.disabled = !1,
                             Swal.fire({
-                                text: "Você redefiniu sua senha com sucesso!",
+                                text: "Você se cadastrou com sucesso!",
                                 icon: "success",
                                 buttonsStyling: !1,
                                 confirmButtonText: "Ok, entendi!",
@@ -108,9 +107,9 @@ var KTSignupGeneral = function () {
                                 }
                             }).then(function (t) {
                                 if (t.isConfirmed) {
-                                    e.reset(), r.reset();
-                                    var a = e.getAttribute("data-kt-redirect-url");
-                                    if (a) location.href = a;
+                                  if (a) e.submit();
+                                      e.reset();
+                                     r.reset();
                                 }
                             })
                         }, 1500);
