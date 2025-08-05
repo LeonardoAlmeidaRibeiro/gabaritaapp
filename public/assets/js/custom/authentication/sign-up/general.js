@@ -108,8 +108,6 @@ var KTSignupGeneral = function () {
                             }).then(function (t) {
                                 if (t.isConfirmed) {
                                   if (a) e.submit();
-                                      e.reset();
-                                     r.reset();
                                 }
                             })
                         }, 1500);

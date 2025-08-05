@@ -36,7 +36,7 @@
             <!--begin::Content-->
             <div class="w-md-400px">
                 <!--begin::Form-->
-                <form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" data-kt-redirect-url="{{ route('testeCadastro') }}" action="{{ route('testeCadastro') }}" method="POST">
+                <form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" data-kt-redirect-url="{{ route('site.cadastration') }}" action="{{ route('site.cadastration') }}" method="POST">
                     @csrf
                     <!--begin::Heading-->
                     <div class="text-center mb-11">
@@ -102,7 +102,7 @@
                     <!--end::Accept-->
                     <!--begin::Submit button-->
                     <div class="d-grid mb-10">
-                        <button type="button" id="kt_sign_up_submit" class="btn btn-primary">
+                        <button type="submit" id="kt_sign_up_submit" class="btn btn-primary">
                             <!--begin::Indicator label-->
                             <span class="indicator-label">Inscrever-se</span>
                             <!--end::Indicator label-->

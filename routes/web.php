@@ -9,9 +9,9 @@ Route::get('/', function () {
 });
 
 Route::get('/site/registration', [UserController::class, 'registration'])->name('site.registration');
+Route::post('/site/cadastration', [UserController::class, 'cadastration'])->name('site.cadastration');
 
-
-Route::post('/testeCadastro', function (Request $request) {
+Route::get('/teste', function (Request $request) {
     dd($request->all());
-    return view('welcome');
-})->name('testeCadastro');
+    return view('teste');
+})->name('teste');
