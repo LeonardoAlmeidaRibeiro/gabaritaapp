@@ -115,7 +115,7 @@
                     <!--end::Submit button-->
                     <!--begin::Sign up-->
                     <div class="text-gray-500 text-center fw-semibold fs-6">Já tem uma conta?
-                        <a href="../../demo1/dist/authentication/layouts/overlay/sign-in.html" class="link-primary fw-semibold">Entrar</a></div>
+                        <a href="{{ route('site.login') }}" class="link-primary fw-semibold">Entrar</a></div>
                     <!--end::Sign up-->
                 </form>
                 <!--end::Form-->

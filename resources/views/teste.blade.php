@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tela de Teste</title>
+  <title>Bem-vindo</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,43 +23,22 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
       width: 100%;
       max-width: 400px;
-    }
-
-    .card h2 {
       text-align: center;
-      margin-bottom: 1.5rem;
+    }
+
+    .card h1 {
       color: #333;
-    }
-
-    .form-group {
-      margin-bottom: 1rem;
-    }
-
-    .form-group label {
-      display: block;
       margin-bottom: 0.5rem;
+    }
+
+    .card p {
       color: #555;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border-radius: 0.5rem;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 100px;
+      margin-bottom: 1.5rem;
     }
 
     .btn {
-      width: 100%;
-      padding: 0.75rem;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
       background-color: #4CAF50;
       color: white;
       border: none;
@@ -67,6 +46,7 @@
       font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      text-decoration: none;
     }
 
     .btn:hover {
@@ -84,38 +64,11 @@
 <body>
 
   <div class="card">
-    <h2>Formulário de Teste</h2>
-    <form>
-      <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" placeholder="Digite seu nome">
-      </div>
-
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Digite seu e-mail">
-      </div>
-
-      <div class="form-group">
-        <label for="setor">Setor</label>
-        <select id="setor">
-          <option value="">Selecione</option>
-          <option value="TI">TI</option>
-          <option value="RH">RH</option>
-          <option value="Financeiro">Financeiro</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
-      </div>
-
-      <button class="btn" type="submit">Enviar</button>
-    </form>
-
+    <h1>🎉 Bem-vindo!</h1>
+    <p>Você entrou com sucesso no sistema.<br>Estamos felizes em ter você aqui.</p>
+    <a href="/dashboard" class="btn">Ir para o painel</a>
     <div class="footer">
-      &copy; 2025 - Tela de Teste
+      &copy; 2025 - Sistema X
     </div>
   </div>
 
